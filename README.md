@@ -1,2 +1,2 @@
 sanaz mardani (@sani_mrd)
-nima haratiyan (@Nima_htn)
+nima haratian (@Nima_htn)
