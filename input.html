@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Input Tumor Features</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div style="text-align: right; margin-bottom: 20px;">
+        <a href="{{ url_for('history') }}">
+            <button style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; cursor: pointer;">
+                Previous Predictions
+            </button>
+        </a>
+    </div>
+    <div class="container">
+        <h2 class="mt-5">Enter Tumor Features</h2>
+        <form method="POST">
+            <div class="form-group">
+                <label>mean radius</label>
+                <input type="text" class="form-control" name="mean radius" placeholder="Please enter a number between 5 and 30." required>
+            </div>
+            <div class="form-group">
+                <label>mean texture</label>
+                <input type="text" class="form-control" name="mean texture" placeholder="Please enter a number between 8 and 50." required>
+            </div>
+            <div class="form-group">
+                <label>mean perimeter</label>
+                <input type="text" class="form-control" name="mean perimeter" placeholder="Please enter a number between 30 and 200." required>
+            </div>
+            <div class="form-group">
+                <label>mean area</label>
+                <input type="text" class="form-control" name="mean area" placeholder="Please enter a number between 100 and 3000." required>
+            </div>
+            <div class="form-group">
+                <label>mean smoothness</label>
+                <input type="text" class="form-control" name="mean smoothness" placeholder="Please enter a number between 0 and 0.5." required>
+            </div>
+            <div class="form-group">
+                <label>mean compactness</label>
+                <input type="text" class="form-control" name="mean compactness" placeholder="Please enter a number between 0 and 0.5." required>
+            </div>
+            <div class="form-group">
+                <label>mean concavity</label>
+                <input type="text" class="form-control" name="mean concavity" placeholder="Please enter a number between 0 and 0.5." required>
+            </div>
+            <div class="form-group">
+                <label>mean concave points</label>
+                <input type="text" class="form-control" name="mean concave points" placeholder="Please enter a number between 0 and 0.5." required>
+            </div>
+            <div class="form-group">
+                <label>mean symmetry</label>
+                <input type="text" class="form-control" name="mean symmetry" placeholder="Please enter a number between 0 and 0.5." required>
+            </div>
+            <div class="form-group">
+                <label>mean fractal dimension</label>
+                <input type="text" class="form-control" name="mean fractal dimension" placeholder="Please enter a number between 0 and 0.5." required>
+            </div>
+            <div class="form-group">
+                <label>radius error</label>
+                <input type="text" class="form-control" name="radius error" placeholder="Please enter a number between 0 and 5." required>
+            </div>
+            <div class="form-group">
+                <label>texture error </label>
+                <input type="text" class="form-control" name="texture error" placeholder="Please enter a number between 0 and 6." required>
+            </div>
+            <div class="form-group">
+                <label>perimeter error</label>
+                <input type="text" class="form-control" name="perimeter error" placeholder="Please enter a number between  0 and 25." required>
+            </div>
+            <div class="form-group">
+                <label>area error</label>
+                <input type="text" class="form-control" name="area error" placeholder="Please enter a number between 5 and 7000." required>
+            </div>
+            <div class="form-group">
+                <label>smoothness error</label>
+                <input type="text" class="form-control" name="smoothness error" placeholder="Please enter a number between 0 and 0.5." required>
+            </div>
+            <div class="form-group">
+                <label>compactness error</label>
+                <input type="text" class="form-control" name="compactness error" placeholder="Please enter a number between 0 and 0.5." required>
+            </div>
+            <div class="form-group">
+                <label>concavity error</label>
+                <input type="text" class="form-control" name="concavity error" placeholder="Please enter a number between 0 and 0.5." required>
+            </div>
+            <div class="form-group">
+                <label>concave points error</label>
+                <input type="text" class="form-control" name="concave points error" placeholder="Please enter a number between  0 and 0.1." required>
+            </div>
+            <div class="form-group">
+                <label>symmetry error</label>
+                <input type="text" class="form-control" name="symmetry error" placeholder="Please enter a number between  0 and 0.5." required>
+            </div>
+            <div class="form-group">
+                <label>fractal dimension error</label>
+                <input type="text" class="form-control" name="fractal dimension error" placeholder="Please enter a number between  0 and 0.5." required>
+            </div>
+            <div class="form-group">
+                <label>worst radius</label>
+                <input type="text" class="form-control" name="worst radius" placeholder="Please enter a number between 7 and 40." required>
+            </div>
+            <div class="form-group">
+                <label>worst texture</label>
+                <input type="text" class="form-control" name="worst texture" placeholder="Please enter a number between 10 and 60." required>
+            </div>
+            <div class="form-group">
+                <label>worst perimeter</label>
+                <input type="text" class="form-control" name="worst perimeter" placeholder="Please enter a number between 50 and 300." required>
+            </div>
+            <div class="form-group">
+                <label>worst area</label>
+                <input type="text" class="form-control" name="worst area" placeholder="Please enter a number between 100 and 5000." required>
+            </div>
+            <div class="form-group">
+                <label>worst smoothness</label>
+                <input type="text" class="form-control" name="worst smoothness" placeholder="Please enter a number between  0 and 0.5." required>
+            </div>
+            <div class="form-group">
+                <label>worst compactness</label>
+                <input type="text" class="form-control" name="worst compactness" placeholder="Please enter a number between  0 and 2." required>
+            </div>
+            <div class="form-group">
+                <label>worst concavity</label>
+                <input type="text" class="form-control" name="worst concavity" placeholder="Please enter a number between  0 and 2." required>
+            </div>
+            <div class="form-group">
+                <label>worst concave points</label>
+                <input type="text" class="form-control" name="worst concave points" placeholder="Please enter a number between 0 and 0.5." required>
+            </div>
+            <div class="form-group">
+                <label>worst symmetry</label>
+                <input type="text" class="form-control" name="worst symmetry" placeholder="Please enter a number between 0 and 0.5." required>
+            </div>
+            <div class="form-group">
+                <label>worst fractal dimension</label>
+                <input type="text" class="form-control" name="worst fractal dimension"placeholder="Please enter a number between 0 and 0.5." required>
+            </div>
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

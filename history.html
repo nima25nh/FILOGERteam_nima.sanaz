@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> <!-- Optional CSS -->
+</head>
+<body>
+    <h1>Prediction History</h1>
+    
+    {% if predictions %}
+        <table border="1" cellpadding="10">
+            <thead>
+                <tr>
+                    <th>Input Data</th>
+                    <th>Result</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for prediction in predictions %}
+                    <tr>
+                        <td>{{ prediction.input_data }}</td>
+                        <td>{{ prediction.result }}</td>
+                        <td>{{ prediction.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No predictions found.</p>
+    {% endif %}
+
+    <a href="{{ url_for('input_data') }}">Make another prediction</a> | 
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>
